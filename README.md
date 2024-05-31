@@ -26,8 +26,8 @@ Ten presente que actualmente vamos en la versión 2.2, pero ya se encuentra en d
 
 ### Criterios de conformidad de la WCAG
 
-- A: Este es el nivel básico, y por tanto el que requiere la menor inversión.
-- AA: Nivel intermedio de implementación.
+- A: Este es el nivel básico, y por tanto el que requiere la menor inversión. Se considera que a este nivel el sitio casi no cuenta con accesibilidad.
+- AA: Nivel intermedio de implementación, ya se considera que el sitio es accesible.
 - AAA: Este es el mayor nivel de implementación, y por tanto, el que mayor nivel de incversión requerida. Este nivel lo suelen implementar entes gubernamentales, universidades o servicios escenciales de la vida cotidiana.
 
 Dentro de los niveles anteriores vamos a encontrar los siguientes principios:
