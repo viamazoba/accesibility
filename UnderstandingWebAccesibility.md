@@ -80,3 +80,82 @@ Para los links como para los botones que deseamos utilizar en nuestra web, adem�
 (Colocar aquí good-link-example.png)
 
 - Se recomienda el uso de aria-labels para añadirle descripciones más detalladas a nuestros links en caso de que no se pueda realizar directamente sobre el texto o elemento que acogen o envuelven (revisar sección de Aria para complementar).
+
+### Hablemos de los labels
+
+Los labels son etiquetas muy usadas debido a su significado semántico para los formularios, sin embargo se deben tener presentes las siguientes puntos al implementar estas etiquetas:
+
+- Cada etiqueta input debe poseer su respectivo label y placeholder, debido a que el label **no reemplaza** el placeholder del input, ya que el placeholder debe usarse como un ejemplo de cara al usuario del tipo de dato a digitar en el input (ver imagen a continuación).
+
+(Colocar aquí label-input-placeholder.png)
+
+- Debe asociarse siempre el label con su respectivo input mediante el atributo **for** del label y **id** del input, ya que al dar click o hacer foco sobre el label este foco se traslada al input, lo cual ayuda a una mejor navegación.
+
+La última recomendación dada es válida para aquel elemento HTML al que se le pueda asociar una etiqueta label, por ejemplo: selects.
+
+### Hablemos de los radio buttons
+
+A los radio buttons pueden añadirsele etiquetas que expanden su sentido semnántico, y por tanto su accesibilidad, dichas etiquetas son:
+
+- fieldset tag (<fieldset>) : Cuando un lector de pantalla encuentra esta etiqueta en el radio button, le especifica al usuario que ha entrado a un grupo de elementos relacionados.
+- legend tag (<legend>): Funciona como el título o la descripción del grupo.
+
+En la siguiente imagen se muestra cómo puede verse un radio button accesible:
+
+(Poner aquí accesible-radio-button.png)
+
+### Dato interesante
+
+Se estima que alrededor del 96.5% de los sitios web tienen problemas de accesibilidad que se podrían prevenir conociendo los fundamentos.
+
+### Hablemos de HTML Semnántico
+
+Es importante usar las etiquetas adecuadas en cada una de nuestras páginas, ya que:
+
+- Por defecto las etiquetas con sentido semántico como lo son nav, main, section y footer ayudan a que el lector de pantalla pueda ubicar con facilidad a las personas, puesto que comenta en que parte se está ubicando mientras navega.
+
+- Otras etiquetas semánticas como botones, labels, links, etc. Poseen un comportamiento por defecto para la bevagación, ya que sobre estos elemento se puede hacer foco sin atributos adicionales y son facilmente reconocibles por un lector de pantalla.
+
+- Recuerda que utilizar HTML semántico también ayuda a que los navegadores puedan reconocer más facilmente el contenido de tu página para ser posicionada en los resultados de búsqueda.
+
+### Hablemos de listar nuestro contenido
+
+Se recomienda utilizar las etiquetas **<li>** y **<ul>** en todos lo elementos que se puedan listar como los elementos del nav bar, elementos del footer, cards de los carruseles, etc. Ya que las tecnologías asistivas al encontrarse con estas etiquetas anuncian el principio y fin de la navegación de dichos elementos, lo que ayuda a que el usuario comprenda la cantidad de elementos que hay en la sección. Ten mucho cuidado con esto, ya que suele darsele este lugar a los divs, los cuales carecen de este sentido y usabilidad.
+
+### Hablemos del tamaño del texto apropiado
+
+Se recomienda que para el tamaño del texto se utilice **rem**, debido a que con esta medida relativa las tecnologías asistivas y los navegadores pueden controlar el tamaño de los textos, y así poderlos agrandar o reducir según las necesidades de los usuarios.
+
+### Hablemos de accesibilidad en los títulos
+
+En la siguiente imagen se muestra que los títulos (heading) son los elementos más frecuentemente utilizados para la navegación por las tecnologías asistivas, por tanto es importante utilizar adecuadamente este tipo de etiquetas.
+
+(Colocar aquí use-of-headings.png)
+
+Las siguientes reglas son las que debemos seguir para utilizar las etiquetas de título adecuadamente:
+
+- Los números de las etiquetas de los títulos (h1, h2, h3, etc.) deben ser consecutivos, lo que quiere decir que conforme hacemos scroll en nuestra página dicho número debe ir en aumento.
+
+- Sólo debe existir una etiqueta **h1** por página, ya que esta etiqueta es la que dará un contexto a las personas al ser leidas por tecnologías asistivas.
+
+- Aplica las etiquetas de título por estructura más que por estilos, ya que al final el estilo puede ser modificado mediante CSS.
+
+### Hablemos de ARIA (Accessible Rich Internet Applications)
+
+Estos son atributos que buscan dar mayor contexto al navegador, y por tanto a las tecnologías asistivas, para elementos en nuestra página web que no tienen una etiqueta HTML dedicada, por ejemplo: cards, acordiones, modales, etc. Sin embargo, se aconseja restringir su uso a este caso específico o cuando se requiere dar mayor contexto sobre un elemento, pero lo recomendable es priorizar elementos semánticos.
+
+### Hablemos de ARIA live
+
+Este atributo se utiliza para definir regiones que pueden cambiar dinámicamente, por ejemplo, cuando se aplican notificaciones a la aplicación por un formulario que se ha rellenado mal (ver imagen). Así, el ARIA live le permite a las tecnologías asistivas interrumpir lo que estaban haciendo al aparecer la notificación dinámica, y centrarse en ella.
+
+(poner aquí use-cases-aria-live.png)
+
+### Hablemos del focus programable
+
+En el caso de las notificaciones o cuando se envía un formulario, se espera que el usuario tenga la forma de continuar la navegción de forma simple, y en ese caso se puede aplicar un foco automático a un elemento que lo devuelva a una página o contenido principal. Lo anterior se hace mediante JavaScript, y se busca mantener la lógica en el flujo de navegación. En la siguiente imagen se muestra un foco programable para volver a la página principal luego de llenar un formulario.
+
+(poner aquí programmable-focus.png)
+
+### Hablemos de JavaScript accesible
+
+Lo que se debe tener en cuenta al utilizar los diferentes addEventListener con JavaScript es que las personas van a utilizar diferentes dispositivos para acceder a la web, entonces si se piensa utilizar **mouseover** y **mouseout**, también se debe pensar en su contra parte más accesible como **focus** y **blur** para deteminar las acciones, puesto que muchos dispositivos móviles y tecnologías asistivas no utilizan mouse en su navegación.
