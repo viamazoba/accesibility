@@ -159,3 +159,16 @@ En el caso de las notificaciones o cuando se envía un formulario, se espera que
 ### Hablemos de JavaScript accesible
 
 Lo que se debe tener en cuenta al utilizar los diferentes addEventListener con JavaScript es que las personas van a utilizar diferentes dispositivos para acceder a la web, entonces si se piensa utilizar **mouseover** y **mouseout**, también se debe pensar en su contra parte más accesible como **focus** y **blur** para deteminar las acciones, puesto que muchos dispositivos móviles y tecnologías asistivas no utilizan mouse en su navegación.
+
+### Hablemos del Skip Navigation
+
+Generalmente nuestros menú (header) tienden a tener mucha información de la navegación en nuestro sitio web (ver figura), sin embargo, muchas de las personas que ingresan por teclado no desean recorrer todo el menú para poder llegar al contenido principal de nuestro sitio, por tanto, solemos colocar elementos como lo son los Skip Navigation. Los cuales son elementos que con el primer tab nos pueden llevar al contenido principal (ver figura).
+
+(Colocar aquí navigation.png)
+(Colocar aquí navigation-with-skip.png)
+
+Como viste anteriormente, los Skip Navigation tienden a ser elementos que aparecen o desaparecen de la pantalla y como desarrollador puedes utilizar diferentes propiedades para hacerlo, sin embargo, no todas son recomendables porque tieneden a hacer el elemento invisible para el árbol de accesibilidad, lo que hace que ciertas tecnologías asistivas omitan este elemento, en la siguiente figura se muestran algunas de dichas propiedades:
+
+(Colocar aquí recommendation-skip-element.png)
+
+Otra consideración que debes tener al aplicar al colocar un skip navigation es su aparición en pantalla, ya que las personas pueden tender a obviar este elemento al navegar, por ello se recomienda una aparición con transición para llamar la atención de las personas, por ejemplo: Hacer que el skip navigación tenga una transición de 2 a 3 segundos para su aparición completa.
